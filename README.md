@@ -1,4 +1,5 @@
-# test
+#TextCNN
+
 
 在TensorFlow中实现CNN进行文本分类
 
