@@ -21,7 +21,11 @@
 >python evaluation.py --checkpoint_dir runs/1651319732/checkpoints/ 
 指定模型位置，开始测试
 
+<<<<<<< HEAD
 ## requirements
+=======
+# requirements
+>>>>>>> 34224478eff4e6baeb9be8521efcea19bbd732df
 >tensorflow=1.0.0(high is okay.)
 
 >python3
