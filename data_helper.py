@@ -4,6 +4,8 @@ from sklearn.preprocessing import LabelBinarizer
 from tensorflow.contrib import learn
 import pdb
 import collections
+
+
 #过滤函数，
 def clean_str(string):
     """
@@ -24,6 +26,8 @@ def clean_str(string):
     string = re.sub(r"\?", " \? ", string)
     string = re.sub(r"\s{2,}", " ", string)
     return string.strip().lower()
+
+
 #加载数据的函数
 def load_data_and_labels(positive_data_file, negative_data_file):
     """
@@ -77,6 +81,7 @@ def load_data_labels(data_file, labels_file):
     x = np.array(list(vocab_processor.fit_transform(data)))
     return x, y, vocab_processor
 
+
 #生成batch数据
 def batch_iter(data, batch_size, num_epochs, shuffle=True):
     """
@@ -96,4 +101,3 @@ def batch_iter(data, batch_size, num_epochs, shuffle=True):
             start_index = batch_num * batch_size
             end_index = min((batch_num + 1) * batch_size, data_size)
             yield shuffled_data[start_index:end_index]
-
